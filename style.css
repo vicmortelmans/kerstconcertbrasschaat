@@ -162,6 +162,7 @@ section {
 
   .flower-arc img {
     height: 100vw;  /* assuming it's square! */
+	opacity: 50%;
   }
 
 }
