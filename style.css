@@ -1,0 +1,115 @@
+
+:root {
+  --bg: #fafcf5;
+  --text: #5a9d95;
+  --accent: #ea233b;
+  --gold: #ce924c;
+  --font: "Playfair Display", serif;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-weight: 500;
+}
+
+main {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 100vh;
+  overflow: hidden;
+  padding: 5vw;
+  box-sizing: border-box;
+}
+
+.info {
+  position: relative;    /* establishes stacking context */
+  z-index: 2;            /* higher than decoration */
+  max-width: 40vw;
+}
+
+.title {
+  font-size: 10vh;
+  line-height: 0.8;
+  text-transform: uppercase;
+  margin-bottom: 0vh;
+  margin-top: 0vh;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: -0.01em
+}
+
+.subtitle {
+  font-size: 3vh;
+  font-weight: 400;
+  line-height: 1.4;
+  margin-bottom: 1.5vh;
+  color: var(--accent);
+}
+
+.details {
+  font-size: 3vh;
+  line-height: 1.2;
+  margin-bottom: 2vh;
+}
+
+.ticket-button {
+  display: inline-block;
+  background: var(--gold);
+  color: #fff;
+  text-decoration: none;
+  padding: 1.6vh 1.6vh 0vh 1.6vh;
+  border-radius: 3vh;
+  font-size: 3vh;
+  font-weight: 600;
+  text-align: center;
+  transition: background 0.2s ease-in-out;
+}
+.ticket-button:hover {
+  background: var(--accent);
+}
+.ticket-button img {
+  height: 10vh;
+}
+
+.decoration {
+  position: absolute;
+  bottom: 0vh;
+  right: 0vw;
+  color: var(--gold);
+}
+
+.flower-arc {
+  position: relative;
+}
+
+.flower-arc img {
+  height: 80vh;
+}
+
+.orchestra-name {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: end;
+  font-size: 10vh;
+  text-transform: uppercase;
+  text-align: right;
+  font-weight: 600;
+  line-height: 1;
+  padding-right: 5vw;
+}
+.orchestra-name-details {
+  font-size: 2vh;
+  text-transform: none;
+  font-weight: 400;
+}
+
