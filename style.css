@@ -11,27 +11,34 @@ html, body {
   margin: 0;
   padding: 0;
   height: 100%;
-  background: var(--bg);
-  color: var(--text);
   font-family: var(--font);
-  font-weight: 500;
+  font-weight: 400;
+  scroll-behavior: smooth;
 }
 
-main {
-  position: relative;
+/* Make each section fill the viewport */
+section {
+  height: 100vh;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  height: 100vh;
-  overflow: hidden;
+  box-sizing: border-box;
   padding: 5vw;
   box-sizing: border-box;
+}
+
+/* First section retains original styling */
+.hero {
+  background: var(--bg);
+  color: var(--text);
+  position: relative;
+  overflow: hidden;
 }
 
 .info {
   position: relative;    /* establishes stacking context */
   z-index: 2;            /* higher than decoration */
-  max-width: 40vw;
 }
 
 .title {
@@ -111,5 +118,10 @@ main {
   font-size: 2vh;
   text-transform: none;
   font-weight: 400;
+}
+
+/* Second section has a different background color */
+.more-info {
+  background-color: #e0dede; /* choose a distinct color */
 }
 
